@@ -72,7 +72,7 @@ function copyClip(event){
 
     tooltipElem = document.createElement('div');
       tooltipElem.className = 'tooltip';
-      tooltipElem.innerHTML = tooltipHtml;
+      tooltipElem.innerText = 'Copied to clipboard!';
       document.body.append(tooltipElem);
 
       let coords = target.getBoundingClientRect();
