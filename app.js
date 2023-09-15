@@ -16,7 +16,7 @@ function rot13(message){
     }).join(' ');
  
      arr = res.split(' ').map(el => +el);
-
+    // +- 13 for Eng && +- 16 for Ru
      for(let i = 0; i < arr.length; i++){
        if(arr[i] > 77 && arr[i] <= 90){
           arr[i] -= 13
@@ -26,14 +26,14 @@ function rot13(message){
           arr[i] -= 13
         } else if(arr[i] <= 109 && arr[i] >=97) {
           arr[i] += 13
-        } else if(arr[i] >= 1040 && arr[i] <= 1058){
-            arr[i] += 13
-        } else if(arr[i] > 1058 && arr[i] <= 1071){
-            arr[i] -=13
-        } else if(arr[i] > 1071 && arr[i] <= 1090){
-            arr[i] += 13
-        } else if(arr[i] > 1090 && arr[i] <= 1103 ){
-            arr[i] -= 13
+        } else if(arr[i] >= 1040 && arr[i] <= 1055){
+            arr[i] += 16
+        } else if(arr[i] >= 1056 && arr[i] <= 1071){
+            arr[i] -=16
+        } else if(arr[i] >= 1072 && arr[i] <= 1087){
+            arr[i] += 16
+        } else if(arr[i] >= 1088 && arr[i] <= 1103 ){
+            arr[i] -= 16
         }
       
      }
